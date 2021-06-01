@@ -1,0 +1,17 @@
+import numpy as np
+
+arr = np.arange(21)
+print("\nOriginal array:")
+print(arr)
+mean = np.mean(arr)
+avv = np.average(arr)
+assert np.allclose(mean, avv)
+print("\nThe mean is: ", mean)
+mean = np.std(arr)
+avv = np.sqrt(np.mean((arr - np.mean(arr)) ** 2))
+assert np.allclose(mean, avv)
+print("\nstd is: ", mean)
+mean = np.var(arr)
+avv = np.mean((arr - np.mean(arr)) ** 2)
+assert np.allclose(mean, avv)
+print("\nThe Variance: ", mean)
